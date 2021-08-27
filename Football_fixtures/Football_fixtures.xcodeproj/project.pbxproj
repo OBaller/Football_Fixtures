@@ -14,6 +14,7 @@
 		B436688F26D68FD000E6F235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B436688E26D68FD000E6F235 /* Assets.xcassets */; };
 		B436689226D68FD000E6F235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B436689026D68FD000E6F235 /* LaunchScreen.storyboard */; };
 		B43668A626D9320A00E6F235 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A526D9320A00E6F235 /* DataModel.swift */; };
+		B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A726D932B400E6F235 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B436689126D68FD000E6F235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B436689326D68FD000E6F235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B43668A526D9320A00E6F235 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		B43668A726D932B400E6F235 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		B436687926D68FCB00E6F235 = {
 			isa = PBXGroup;
 			children = (
+				B43668A426D931E300E6F235 /* Model */,
 				B436688426D68FCB00E6F235 /* Football_fixtures */,
 				B436688326D68FCB00E6F235 /* Products */,
 			);
@@ -58,7 +61,6 @@
 		B436688426D68FCB00E6F235 /* Football_fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				B43668A426D931E300E6F235 /* Model */,
 				B436688526D68FCB00E6F235 /* AppDelegate.swift */,
 				B436688726D68FCB00E6F235 /* SceneDelegate.swift */,
 				B436688926D68FCB00E6F235 /* ViewController.swift */,
@@ -66,6 +68,7 @@
 				B436688E26D68FD000E6F235 /* Assets.xcassets */,
 				B436689026D68FD000E6F235 /* LaunchScreen.storyboard */,
 				B436689326D68FD000E6F235 /* Info.plist */,
+				B43668A726D932B400E6F235 /* TableViewCell.swift */,
 			);
 			path = Football_fixtures;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */,
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
 				B43668A626D9320A00E6F235 /* DataModel.swift in Sources */,
 				B436688626D68FCB00E6F235 /* AppDelegate.swift in Sources */,

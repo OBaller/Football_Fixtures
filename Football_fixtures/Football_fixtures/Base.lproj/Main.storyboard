@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="dAU-Z2-fjF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="dAU-Z2-fjF" customClass="TableViewCell" customModule="Football_fixtures" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dAU-Z2-fjF" id="qcB-Q0-9ud">
@@ -100,6 +100,14 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="hUc-jd-WMY" secondAttribute="bottom" constant="4.5" id="sBo-oR-ORe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fixtureLabel" destination="ROE-sd-pnT" id="bYc-UU-LIc"/>
+                                            <outlet property="gameMinuteLabel" destination="UOa-Lf-o9B" id="zTQ-6i-EZ4"/>
+                                            <outlet property="gameWeekLabel" destination="BPt-Qf-GPp" id="2wr-1J-fTG"/>
+                                            <outlet property="matchTimeLabel" destination="SnX-Pl-oSk" id="13c-Me-vBQ"/>
+                                            <outlet property="scoreLabel" destination="Kui-eN-Uen" id="9xf-LU-mJP"/>
+                                            <outlet property="timedLabel" destination="Anl-Q6-Mm9" id="pJU-9v-vXw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -114,6 +122,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Today's Fixtures" id="RjE-85-Jci"/>
+                    <connections>
+                        <outlet property="gamesTableView" destination="Dmz-LZ-R3x" id="Mrl-11-jUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0t-zw-aGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
