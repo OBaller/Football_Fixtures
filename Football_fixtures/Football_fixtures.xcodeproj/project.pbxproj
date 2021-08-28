@@ -15,6 +15,8 @@
 		B436689226D68FD000E6F235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B436689026D68FD000E6F235 /* LaunchScreen.storyboard */; };
 		B43668A626D9320A00E6F235 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A526D9320A00E6F235 /* DataModel.swift */; };
 		B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A726D932B400E6F235 /* TableViewCell.swift */; };
+		B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A926DA17AF00E6F235 /* NetworkService.swift */; };
+		B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B436689326D68FD000E6F235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B43668A526D9320A00E6F235 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B43668A726D932B400E6F235 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B43668A926DA17AF00E6F235 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 		B436687926D68FCB00E6F235 = {
 			isa = PBXGroup;
 			children = (
+				B43668AB26DAF5DE00E6F235 /* SecondTab */,
 				B43668A426D931E300E6F235 /* Model */,
 				B436688426D68FCB00E6F235 /* Football_fixtures */,
 				B436688326D68FCB00E6F235 /* Products */,
@@ -69,6 +74,7 @@
 				B436689026D68FD000E6F235 /* LaunchScreen.storyboard */,
 				B436689326D68FD000E6F235 /* Info.plist */,
 				B43668A726D932B400E6F235 /* TableViewCell.swift */,
+				B43668A926DA17AF00E6F235 /* NetworkService.swift */,
 			);
 			path = Football_fixtures;
 			sourceTree = "<group>";
@@ -79,6 +85,14 @@
 				B43668A526D9320A00E6F235 /* DataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B43668AB26DAF5DE00E6F235 /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */,
+			);
+			path = SecondTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +169,8 @@
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
 				B43668A626D9320A00E6F235 /* DataModel.swift in Sources */,
 				B436688626D68FCB00E6F235 /* AppDelegate.swift in Sources */,
+				B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */,
+				B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */,
 				B436688826D68FCB00E6F235 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

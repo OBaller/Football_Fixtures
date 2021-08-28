@@ -7,6 +7,6 @@
 
 import Foundation
 
-class DataModel {
+struct DataModel: Decodable {
     
 }
