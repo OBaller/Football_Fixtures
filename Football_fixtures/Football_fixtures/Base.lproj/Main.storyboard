@@ -8,21 +8,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Competitions-->
         <scene sceneID="YB3-na-1gj">
             <objects>
-                <viewController id="gR3-gb-9iG" sceneMemberID="viewController">
+                <viewController id="gR3-gb-9iG" customClass="CompetitionViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWD-GL-AGQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YqM-Mo-7qr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="63" id="ilD-rh-pAh" customClass="CompetitionTableViewCell" customModule="Football_fixtures" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ilD-rh-pAh" id="fM7-wE-TtO">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="competition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-eL-xho">
+                                                    <rect key="frame" x="20" y="11.5" width="91" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rY7-eL-xho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fM7-wE-TtO" secondAttribute="leading" symbolic="YES" id="5oK-wq-4fT"/>
+                                                <constraint firstAttribute="bottom" secondItem="rY7-eL-xho" secondAttribute="bottom" constant="11.5" id="E46-wu-Eor"/>
+                                                <constraint firstAttribute="trailing" secondItem="rY7-eL-xho" secondAttribute="trailing" constant="273.5" id="ZKn-3z-8Bt"/>
+                                                <constraint firstItem="rY7-eL-xho" firstAttribute="top" secondItem="fM7-wE-TtO" secondAttribute="top" constant="11.5" id="lek-uF-m3J"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="competitionLabel" destination="rY7-eL-xho" id="bB2-PT-ILN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fa2-7Z-P6I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="bottom" secondItem="Fa2-7Z-P6I" secondAttribute="bottom" id="MX9-m6-Wt7"/>
+                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="leading" secondItem="Fa2-7Z-P6I" secondAttribute="leading" id="eBW-KX-wBT"/>
+                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="trailing" secondItem="Fa2-7Z-P6I" secondAttribute="trailing" id="u0L-KJ-ouq"/>
+                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="top" secondItem="Fa2-7Z-P6I" secondAttribute="top" id="ygp-zH-urm"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-stadium-48" id="K62-Oa-CfD"/>
+                    <navigationItem key="navigationItem" title="Competitions" id="Hvx-VZ-Xnu"/>
+                    <connections>
+                        <outlet property="compTableView" destination="YqM-Mo-7qr" id="zuO-JO-T0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ6-a7-X8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="247"/>
+            <point key="canvasLocation" x="1389.8550724637682" y="246.42857142857142"/>
         </scene>
         <!--Today's Fixtures-->
         <scene sceneID="nHi-zC-FL7">
@@ -142,7 +184,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="THe-ge-auO" kind="relationship" relationship="viewControllers" id="HWE-Uk-wOj"/>
-                        <segue destination="gR3-gb-9iG" kind="relationship" relationship="viewControllers" id="K5k-IN-qqj"/>
+                        <segue destination="t3M-q1-f5K" kind="relationship" relationship="viewControllers" id="K5k-IN-qqj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqO-Dd-gLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,6 +211,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xu8-1V-1Oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="479.71014492753625" y="-453.34821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eCS-b5-dfR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t3M-q1-f5K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-stadium-48" id="K62-Oa-CfD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvB-th-Xm5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gR3-gb-9iG" kind="relationship" relationship="rootViewController" id="J71-iK-i5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHm-Tp-WbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.71014492753625" y="246.42857142857142"/>
         </scene>
     </scenes>
     <resources>

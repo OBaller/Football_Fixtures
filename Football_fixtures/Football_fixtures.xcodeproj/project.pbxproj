@@ -17,6 +17,7 @@
 		B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A726D932B400E6F235 /* TableViewCell.swift */; };
 		B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A926DA17AF00E6F235 /* NetworkService.swift */; };
 		B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */; };
+		B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B43668A726D932B400E6F235 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B43668A926DA17AF00E6F235 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
+		B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +70,11 @@
 			children = (
 				B436688526D68FCB00E6F235 /* AppDelegate.swift */,
 				B436688726D68FCB00E6F235 /* SceneDelegate.swift */,
-				B436688926D68FCB00E6F235 /* ViewController.swift */,
+				B43668B026DAFEF000E6F235 /* Livescores */,
 				B436688B26D68FCB00E6F235 /* Main.storyboard */,
 				B436688E26D68FD000E6F235 /* Assets.xcassets */,
 				B436689026D68FD000E6F235 /* LaunchScreen.storyboard */,
 				B436689326D68FD000E6F235 /* Info.plist */,
-				B43668A726D932B400E6F235 /* TableViewCell.swift */,
 				B43668A926DA17AF00E6F235 /* NetworkService.swift */,
 			);
 			path = Football_fixtures;
@@ -91,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */,
+				B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */,
 			);
 			path = SecondTab;
+			sourceTree = "<group>";
+		};
+		B43668B026DAFEF000E6F235 /* Livescores */ = {
+			isa = PBXGroup;
+			children = (
+				B436688926D68FCB00E6F235 /* ViewController.swift */,
+				B43668A726D932B400E6F235 /* TableViewCell.swift */,
+			);
+			path = Livescores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */,
 				B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */,
 				B436688826D68FCB00E6F235 /* SceneDelegate.swift in Sources */,
+				B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
