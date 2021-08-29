@@ -10,10 +10,11 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var timedLabel: UILabel!
     @IBOutlet weak var matchTimeLabel: UILabel!
-    
     @IBOutlet weak var gameWeekLabel: UILabel!
-    @IBOutlet weak var fixtureLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var gameMinuteLabel: UILabel!
+    @IBOutlet weak var homeTeamLabel: UILabel!
+    @IBOutlet weak var awayTeamLabel: UILabel!
+    @IBOutlet weak var homeScoreLabel: UILabel!
+    @IBOutlet weak var awayScoreLabel: UILabel!
+    
     
 }
