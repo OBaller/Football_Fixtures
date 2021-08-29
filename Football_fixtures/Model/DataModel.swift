@@ -4,7 +4,7 @@
 import Foundation
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct DataModel: Codable {
     let count: Int
     let filters: Filters
     let matches: [Match]
@@ -20,12 +20,12 @@ struct Match: Codable {
     let id: Int
     let competition: Competition
     let season: Season
-    let utcDate: Date
+    let utcDate: String
     let status: Status
     let matchday: Int
     let stage: Stage
     let group: JSONNull?
-    let lastUpdated: Date
+    let lastUpdated: String
     let odds: Odds
     let score: Score
     let homeTeam, awayTeam: Team

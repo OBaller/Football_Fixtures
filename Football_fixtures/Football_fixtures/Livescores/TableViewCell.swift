@@ -17,4 +17,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var awayScoreLabel: UILabel!
     
     
+//    func setup(with model: Match) {
+//        homeTeamLabel.text = model.homeTeam
+//    }
+//    
 }
