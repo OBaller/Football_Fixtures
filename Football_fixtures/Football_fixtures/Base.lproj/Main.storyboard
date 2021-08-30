@@ -155,7 +155,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00'" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5E-AR-2pb">
                                                     <rect key="frame" x="338.5" y="40" width="22.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -182,7 +182,7 @@
                                             <outlet property="homeScoreLabel" destination="3Gf-Al-Ota" id="9rt-c2-BwH"/>
                                             <outlet property="homeTeamLabel" destination="pv6-p9-NC6" id="Zlg-Wv-0xu"/>
                                             <outlet property="matchTimeLabel" destination="SnX-Pl-oSk" id="13c-Me-vBQ"/>
-                                            <outlet property="timedLabel" destination="Anl-Q6-Mm9" id="pJU-9v-vXw"/>
+                                            <outlet property="timerLabel" destination="x5E-AR-2pb" id="DGg-Pm-WOg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -265,9 +265,6 @@
         <image name="icons8-stadium-48" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

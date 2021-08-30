@@ -9,5 +9,9 @@ import UIKit
 
 class CompetitionTableViewCell: UITableViewCell {
     @IBOutlet weak var competitionLabel: UILabel!
+    
+    func setup(with model: Competition) {
+        competitionLabel.text = model.name
+    }
 
 }

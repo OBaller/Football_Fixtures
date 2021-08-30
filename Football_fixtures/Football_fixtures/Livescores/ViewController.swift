@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         gamesTableView.dataSource = self
         
         fetchFixtures()
+        
     }
     
     func fetchFixtures() {
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
             self.footballData = results
             DispatchQueue.main.async {
                 self.gamesTableView.reloadData()
-                print(results)
+//                print(results)
             }
         }
     }
@@ -38,11 +39,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return footballData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.setup(with: footballData[indexPath.row])
         return cell
     }
     

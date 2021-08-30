@@ -8,7 +8,8 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    @IBOutlet weak var timedLabel: UILabel!
+   
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var matchTimeLabel: UILabel!
     @IBOutlet weak var gameWeekLabel: UILabel!
     @IBOutlet weak var homeTeamLabel: UILabel!
@@ -17,8 +18,20 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var awayScoreLabel: UILabel!
     
     
-//    func setup(with model: Match) {
-//        homeTeamLabel.text = model.homeTeam
-//    }
-//    
+    func setup(with model: Match) {
+        
+        guard let homeScore = model.score.fullTime.homeTeam,
+              let awayScore = model.score.fullTime.awayTeam else {
+            return
+        }
+        
+        homeTeamLabel.text = "\(model.homeTeam.name)"
+        awayTeamLabel.text = "\(model.awayTeam.name)"
+        gameWeekLabel.text = "\(model.matchday)"
+        homeScoreLabel.text = "\(homeScore)"
+        awayScoreLabel.text = "\(awayScore)"
+        timerLabel.text = "\(model.status.rawValue)"
+        
+    }
+
 }
