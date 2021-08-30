@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             self.footballData = results
             DispatchQueue.main.async {
                 self.gamesTableView.reloadData()
-//                print(results)
+               print(results)
             }
         }
     }

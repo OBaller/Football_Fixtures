@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkJ-c4-25A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1Q-bk-cwo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -65,6 +65,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ6-a7-X8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1389.8550724637682" y="246.42857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sUN-Zb-Tjf">
+            <objects>
+                <viewController id="Y1Q-bk-cwo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Nc-Hy-gH0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="2jp-D2-duD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TeF-qX-Tqr"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Table"/>
+                                    <segment title="Fixtures"/>
+                                    <segment title="Teams"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qia-sR-MPd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2jp-D2-duD" firstAttribute="leading" secondItem="qia-sR-MPd" secondAttribute="leading" id="AZJ-mq-Lhz"/>
+                            <constraint firstItem="qia-sR-MPd" firstAttribute="trailing" secondItem="2jp-D2-duD" secondAttribute="trailing" id="Zp3-8h-kbb"/>
+                            <constraint firstItem="2jp-D2-duD" firstAttribute="top" secondItem="qia-sR-MPd" secondAttribute="top" id="za6-yJ-Cds"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8n-df-eab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340" y="-35"/>
         </scene>
         <!--Today's Fixtures-->
         <scene sceneID="nHi-zC-FL7">

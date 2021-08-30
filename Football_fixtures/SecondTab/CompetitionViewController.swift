@@ -28,14 +28,14 @@ class CompetitionViewController: UIViewController {
             
             result.forEach({test in
                 self.competition.append(test.competition)
-//                print(test.competition)
+                print(test.competition)
             })
             
 //            guard let result = result else { return }
 //            self.competition = [result]
             DispatchQueue.main.async {
                 self.compTableView.reloadData()
-//                print(results)
+              
             }
         }
     }
