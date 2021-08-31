@@ -20,18 +20,14 @@ class TableViewCell: UITableViewCell {
     
     func setup(with model: Match) {
         
-        guard let homeScore = model.score.fullTime.homeTeam,
-              let awayScore = model.score.fullTime.awayTeam else {
-            return
-        }
-        
         homeTeamLabel.text = "\(model.homeTeam.name)"
         awayTeamLabel.text = "\(model.awayTeam.name)"
         gameWeekLabel.text = "\(model.matchday)"
-        homeScoreLabel.text = "\(homeScore)"
-        awayScoreLabel.text = "\(awayScore)"
-        timerLabel.text = "\(model.status.rawValue)"
-        
+        homeScoreLabel.text = "\(model.score.fullTime.homeTeam ?? 0)"
+        awayScoreLabel.text = "\(model.score.fullTime.awayTeam ?? 0)"
+        matchTimeLabel.text = "\(model.status.rawValue)"
+        print("\(model.competition)")
+       
     }
 
 }

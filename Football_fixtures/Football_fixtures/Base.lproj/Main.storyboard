@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1Q-bk-cwo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkJ-c4-25A">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -66,39 +66,13 @@
             </objects>
             <point key="canvasLocation" x="1389.8550724637682" y="246.42857142857142"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sUN-Zb-Tjf">
+        <!--Page View Controller-->
+        <scene sceneID="0cE-kx-QDs">
             <objects>
-                <viewController id="Y1Q-bk-cwo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Nc-Hy-gH0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="2jp-D2-duD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="TeF-qX-Tqr"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Table"/>
-                                    <segment title="Fixtures"/>
-                                    <segment title="Teams"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qia-sR-MPd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="2jp-D2-duD" firstAttribute="leading" secondItem="qia-sR-MPd" secondAttribute="leading" id="AZJ-mq-Lhz"/>
-                            <constraint firstItem="qia-sR-MPd" firstAttribute="trailing" secondItem="2jp-D2-duD" secondAttribute="trailing" id="Zp3-8h-kbb"/>
-                            <constraint firstItem="2jp-D2-duD" firstAttribute="top" secondItem="qia-sR-MPd" secondAttribute="top" id="za6-yJ-Cds"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g8n-df-eab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="348-hh-MNb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSQ-K0-dgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340" y="-35"/>
+            <point key="canvasLocation" x="2484" y="-131"/>
         </scene>
         <!--Today's Fixtures-->
         <scene sceneID="nHi-zC-FL7">
@@ -138,7 +112,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-Qf-GPp">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MD:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-Qf-GPp">
                                                             <rect key="frame" x="0.0" y="61" width="51" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="Oof-17-FVJ"/>
@@ -186,24 +160,14 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00'" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5E-AR-2pb">
-                                                    <rect key="frame" x="338.5" y="40" width="22.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jvf-Lz-ppr" firstAttribute="top" secondItem="qcB-Q0-9ud" secondAttribute="topMargin" constant="10.5" id="6Cy-aC-M3O"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="x5E-AR-2pb" secondAttribute="bottom" constant="29" id="8s5-Db-uLt"/>
                                                 <constraint firstAttribute="bottom" secondItem="RYt-QK-fSn" secondAttribute="bottom" constant="23" id="BBw-OW-kd6"/>
-                                                <constraint firstItem="x5E-AR-2pb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jvf-Lz-ppr" secondAttribute="trailing" constant="8" symbolic="YES" id="OjT-YA-umf"/>
                                                 <constraint firstItem="RYt-QK-fSn" firstAttribute="top" secondItem="qcB-Q0-9ud" secondAttribute="top" constant="23" id="ZtF-gj-aWZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="RYt-QK-fSn" secondAttribute="trailing" constant="20" id="gb1-x4-rua"/>
                                                 <constraint firstItem="e0G-t2-NpA" firstAttribute="leading" secondItem="qcB-Q0-9ud" secondAttribute="leading" constant="10" id="gmn-rK-Yf4"/>
                                                 <constraint firstItem="e0G-t2-NpA" firstAttribute="top" secondItem="qcB-Q0-9ud" secondAttribute="top" constant="11" id="od8-Yl-Vsn"/>
-                                                <constraint firstItem="x5E-AR-2pb" firstAttribute="top" secondItem="qcB-Q0-9ud" secondAttribute="topMargin" constant="29" id="r5s-FF-g3W"/>
-                                                <constraint firstItem="RYt-QK-fSn" firstAttribute="leading" secondItem="x5E-AR-2pb" secondAttribute="trailing" constant="8.5" id="sPd-19-eBS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jvf-Lz-ppr" secondAttribute="bottom" constant="10.5" id="smc-zO-jOD"/>
                                                 <constraint firstAttribute="bottom" secondItem="e0G-t2-NpA" secondAttribute="bottom" constant="10" id="tLs-NI-XXU"/>
                                                 <constraint firstItem="jvf-Lz-ppr" firstAttribute="leading" secondItem="e0G-t2-NpA" secondAttribute="trailing" constant="18" id="zPp-Me-ZcQ"/>
@@ -216,7 +180,6 @@
                                             <outlet property="homeScoreLabel" destination="3Gf-Al-Ota" id="9rt-c2-BwH"/>
                                             <outlet property="homeTeamLabel" destination="pv6-p9-NC6" id="Zlg-Wv-0xu"/>
                                             <outlet property="matchTimeLabel" destination="SnX-Pl-oSk" id="13c-Me-vBQ"/>
-                                            <outlet property="timerLabel" destination="x5E-AR-2pb" id="DGg-Pm-WOg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

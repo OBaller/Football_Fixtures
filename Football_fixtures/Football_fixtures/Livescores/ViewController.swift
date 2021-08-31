@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             self.footballData = results
             DispatchQueue.main.async {
                 self.gamesTableView.reloadData()
-               print(results)
+//               print(results)
             }
         }
     }
@@ -44,6 +44,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+//        print(footballData.count)
         cell.setup(with: footballData[indexPath.row])
         return cell
     }
@@ -53,7 +54,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //    }
 }
 
-struct Fixtures: Decodable {
-    var count: String?
-//    var
-}
+
+

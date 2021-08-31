@@ -9,7 +9,7 @@ import UIKit
 
 class CompetitionViewController: UIViewController {
     @IBOutlet weak var compTableView: UITableView!
-    var competition = [Competition]()
+    fileprivate var competition = [Competition]()
     override func viewDidLoad() {
         super.viewDidLoad()
         compTableView.delegate = self
@@ -19,23 +19,15 @@ class CompetitionViewController: UIViewController {
     }
     
     func fetchCompetition() {
-        
-        Service.shared.fetchData { (result, error) in
+        Service.shared.fetchLeagues { (results, error) in
             if let error = error {
               print("Failed to fetch football data", error)
                 return
             }
-            
-            result.forEach({test in
-                self.competition.append(test.competition)
-                print(test.competition)
-            })
-            
-//            guard let result = result else { return }
-//            self.competition = [result]
+            self.competition = results
             DispatchQueue.main.async {
                 self.compTableView.reloadData()
-              
+               print(results)
             }
         }
     }

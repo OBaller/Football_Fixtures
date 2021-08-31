@@ -12,12 +12,12 @@ struct DataModel: Codable {
 
 // MARK: - Filters
 struct Filters: Codable {
-    let dateFrom, dateTo, permission: String
+    let dateFrom, dateTo, permission: String?
 }
 
 // MARK: - Match
 struct Match: Codable {
-    let id: Int
+    let id: Int?
     let competition: Competition
     let season: Season
     let utcDate: String
@@ -39,35 +39,38 @@ struct Team: Codable {
 }
 
 // MARK: - Competition
-struct Competition: Codable {
-    let id: Int
-    let name: String
-    let area: Area
-}
+//struct Competition: Codable {
+//    let id: Int
+//    let name: String
+//    let area: Area
+//}
 
 // MARK: - Area
 struct Area: Codable {
-    let name: Name
-    let code: String
-    let ensignURL: String
+    let name: String
+    let code: String?
+    let ensignURL: String?
 
     enum CodingKeys: String, CodingKey {
-        case name, code
+        case name
+        case code
         case ensignURL = "ensignUrl"
     }
 }
 
-enum Name: String, Codable {
-    case australia = "Australia"
-    case brazil = "Brazil"
-    case england = "England"
-    case france = "France"
-    case germany = "Germany"
-    case italy = "Italy"
-    case netherlands = "Netherlands"
-    case portugal = "Portugal"
-    case spain = "Spain"
-}
+//enum Name: String, Codable {
+//    case australia = "Australia"
+//    case brazil = "Brazil"
+//    case england = "England"
+//    case france = "France"
+//    case germany = "Germany"
+//    case italy = "Italy"
+//    case netherlands = "Netherlands"
+//    case portugal = "Portugal"
+//    case spain = "Spain"
+//    case africa = "Africa"
+//    case argentina = "Argentina"
+//}
 
 // MARK: - Odds
 struct Odds: Codable {
@@ -83,7 +86,7 @@ struct Referee: Codable {
     let id: Int
     let name: String
     let role: Role
-    let nationality: Name?
+    let nationality: String?
 }
 
 enum Role: String, Codable {

@@ -39,7 +39,7 @@ class Service {
                     let jsonDecoder = try
                         JSONDecoder().decode(DataModel.self, from: data)
                     
-                    print(jsonDecoder.matches)
+//                    print(jsonDecoder.matches)
                 
                     completion(jsonDecoder.matches , nil)
                     
@@ -56,9 +56,9 @@ class Service {
     }
     
     
-    func fetchLeagues(completion: @escaping (Competition?, Error?) -> () ) {
+    func fetchLeagues(completion: @escaping ([Competition], Error?) -> () ) {
         // URL
-        let url = URL(string: "https://api.football-data.org/v2/matches")
+        let url = URL(string: "https://api.football-data.org/v2/competitions")
         guard url != nil else {
             print("error creating url object")
             return
@@ -73,17 +73,18 @@ class Service {
         let dataTask = session.dataTask(with: request) { data, response, error in
             if error == nil && data != nil {
                 guard let data = data else {return}
+                
                 do {
                     let jsonDecoder = try
-                        JSONDecoder().decode(Competition.self, from: data)
+                        JSONDecoder().decode(CompetitionModel.self, from: data)
                     
-                    print(jsonDecoder.name)
+                    print(jsonDecoder.competitions)
                 
-                    completion(jsonDecoder, error)
+                    completion(jsonDecoder.competitions ?? [], error)
                     
                 } catch let jsonErr {
                     print("failed to decode json data", jsonErr)
-                    completion(nil, error)
+                    completion([], error)
                 }
             }
         }

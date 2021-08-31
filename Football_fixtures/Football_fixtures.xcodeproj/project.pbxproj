@@ -19,6 +19,7 @@
 		B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */; };
 		B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */; };
 		B43668B326DC3D6100E6F235 /* LivescoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */; };
+		B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B426DD7AF300E6F235 /* CompetitionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
 		B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivescoresViewModel.swift; sourceTree = "<group>"; };
+		B43668B426DD7AF300E6F235 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,8 @@
 		B43668A426D931E300E6F235 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B43668A526D9320A00E6F235 /* DataModel.swift */,
+				B43668B626DD7C5200E6F235 /* DataModel */,
+				B43668B726DD7C6200E6F235 /* CompetitionModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +118,22 @@
 				B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */,
 			);
 			path = ViewsModel;
+			sourceTree = "<group>";
+		};
+		B43668B626DD7C5200E6F235 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B43668A526D9320A00E6F235 /* DataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		B43668B726DD7C6200E6F235 /* CompetitionModel */ = {
+			isa = PBXGroup;
+			children = (
+				B43668B426DD7AF300E6F235 /* CompetitionModel.swift */,
+			);
+			path = CompetitionModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */,
+				B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */,
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
 				B43668B326DC3D6100E6F235 /* LivescoresViewModel.swift in Sources */,
 				B43668A626D9320A00E6F235 /* DataModel.swift in Sources */,
