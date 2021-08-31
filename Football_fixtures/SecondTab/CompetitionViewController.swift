@@ -27,7 +27,7 @@ class CompetitionViewController: UIViewController {
             self.competition = results
             DispatchQueue.main.async {
                 self.compTableView.reloadData()
-               print(results)
+              // print(results)
             }
         }
     }

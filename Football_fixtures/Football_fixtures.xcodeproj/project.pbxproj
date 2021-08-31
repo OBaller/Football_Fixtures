@@ -18,7 +18,6 @@
 		B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668A926DA17AF00E6F235 /* NetworkService.swift */; };
 		B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */; };
 		B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */; };
-		B43668B326DC3D6100E6F235 /* LivescoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */; };
 		B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B426DD7AF300E6F235 /* CompetitionModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		B43668A926DA17AF00E6F235 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
-		B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivescoresViewModel.swift; sourceTree = "<group>"; };
 		B43668B426DD7AF300E6F235 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +113,6 @@
 		B43668B126DC3D2700E6F235 /* ViewsModel */ = {
 			isa = PBXGroup;
 			children = (
-				B43668B226DC3D6000E6F235 /* LivescoresViewModel.swift */,
 			);
 			path = ViewsModel;
 			sourceTree = "<group>";
@@ -209,7 +206,6 @@
 				B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */,
 				B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */,
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
-				B43668B326DC3D6100E6F235 /* LivescoresViewModel.swift in Sources */,
 				B43668A626D9320A00E6F235 /* DataModel.swift in Sources */,
 				B436688626D68FCB00E6F235 /* AppDelegate.swift in Sources */,
 				B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */,

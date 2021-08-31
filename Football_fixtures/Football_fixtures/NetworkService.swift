@@ -80,7 +80,7 @@ class Service {
                     
                     print(jsonDecoder.competitions)
                 
-                    completion(jsonDecoder.competitions ?? [], error)
+                    completion(jsonDecoder.competitions , error)
                     
                 } catch let jsonErr {
                     print("failed to decode json data", jsonErr)
