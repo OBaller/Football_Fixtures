@@ -8,12 +8,36 @@
 import UIKit
 
 class LogPageViewController: UIPageViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-       
+    @IBOutlet weak var pageSwitchControl: UISegmentedControl!
+    var currentView: UIViewController?
+    private(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [self.newColoredViewController(color: "Green"),
+                self.newColoredViewController(color: "Red"),
+                self.newColoredViewController(color: "Blue")]
+    }()
+    
+    private func newColoredViewController(color: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewController(withIdentifier: "\(color)ViewController")
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let firstViewController = orderedViewControllers.first {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
+        
+    }
+    
+    
+    @IBAction func segmentedControlValueChange(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        setViewControllers([orderedViewControllers[index]],
+                           direction: .forward,
+                           animated: true,
+                           completion: nil)
+    }
 }
