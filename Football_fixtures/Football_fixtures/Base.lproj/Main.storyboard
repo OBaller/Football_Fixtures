@@ -193,7 +193,7 @@
         <!--Log Page View Controller-->
         <scene sceneID="3va-O6-Qbt">
             <objects>
-                <pageViewController storyboardIdentifier="LogPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="HVx-ud-WF2" customClass="LogPageViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="LogPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="HVx-ud-WF2" customClass="LogPageViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NYk-Nt-ySk">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="ETs-3D-P7e">
@@ -385,7 +385,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mgA-i1-uhX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mMq-Kf-0mN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogPageView" automaticallyAdjustsScrollViewInsets="NO" id="mMq-Kf-0mN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zq5-Nm-20K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
