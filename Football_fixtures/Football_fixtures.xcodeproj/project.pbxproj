@@ -19,6 +19,10 @@
 		B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */; };
 		B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */; };
 		B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B426DD7AF300E6F235 /* CompetitionModel.swift */; };
+		B43668E226DEFEBB00E6F235 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668E126DEFEB900E6F235 /* LogPageViewController.swift */; };
+		B43668E426DF011C00E6F235 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668E326DF011C00E6F235 /* FirstViewController.swift */; };
+		B43668E626DF017D00E6F235 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668E526DF017D00E6F235 /* SecondViewController.swift */; };
+		B43668E826DF019E00E6F235 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668E726DF019E00E6F235 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		B43668AC26DAF78D00E6F235 /* CompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewController.swift; sourceTree = "<group>"; };
 		B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
 		B43668B426DD7AF300E6F235 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
+		B43668E126DEFEB900E6F235 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
+		B43668E326DF011C00E6F235 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B43668E526DF017D00E6F235 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B43668E726DF019E00E6F235 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		B436687926D68FCB00E6F235 = {
 			isa = PBXGroup;
 			children = (
+				B43668E026DEFD4800E6F235 /* PageControllers + SegmentedControl */,
 				B43668B126DC3D2700E6F235 /* ViewsModel */,
 				B43668AB26DAF5DE00E6F235 /* SecondTab */,
 				B43668A426D931E300E6F235 /* Model */,
@@ -133,6 +142,17 @@
 			path = CompetitionModel;
 			sourceTree = "<group>";
 		};
+		B43668E026DEFD4800E6F235 /* PageControllers + SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				B43668E126DEFEB900E6F235 /* LogPageViewController.swift */,
+				B43668E326DF011C00E6F235 /* FirstViewController.swift */,
+				B43668E526DF017D00E6F235 /* SecondViewController.swift */,
+				B43668E726DF019E00E6F235 /* ThirdViewController.swift */,
+			);
+			path = "PageControllers + SegmentedControl";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43668E626DF017D00E6F235 /* SecondViewController.swift in Sources */,
+				B43668E226DEFEBB00E6F235 /* LogPageViewController.swift in Sources */,
 				B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */,
 				B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */,
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
@@ -212,6 +234,8 @@
 				B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */,
 				B436688826D68FCB00E6F235 /* SceneDelegate.swift in Sources */,
 				B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */,
+				B43668E426DF011C00E6F235 /* FirstViewController.swift in Sources */,
+				B43668E826DF019E00E6F235 /* ThirdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

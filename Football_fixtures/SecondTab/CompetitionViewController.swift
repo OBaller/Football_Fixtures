@@ -45,7 +45,8 @@ extension CompetitionViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = LogPageViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
 }

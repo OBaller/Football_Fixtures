@@ -66,14 +66,6 @@
             </objects>
             <point key="canvasLocation" x="1389.8550724637682" y="246.42857142857142"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="0cE-kx-QDs">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="348-hh-MNb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cSQ-K0-dgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2484" y="-131"/>
-        </scene>
         <!--Today's Fixtures-->
         <scene sceneID="nHi-zC-FL7">
             <objects>
@@ -255,6 +247,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHm-Tp-WbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="479.71014492753625" y="246.42857142857142"/>
+        </scene>
+        <!--Log Page View Controller-->
+        <scene sceneID="o5N-8F-uvl">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="flipHorizontal" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Q9X-xg-esq" customClass="LogPageViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d8W-tn-Cjc">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="Fi2-qY-p21">
+                            <rect key="frame" x="12" y="5.5" width="390" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="Table"/>
+                                <segment title="Fixtures"/>
+                                <segment title="Teams"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="segmentedControlValueChangedWithSender:" destination="Q9X-xg-esq" eventType="valueChanged" id="0ce-7R-MyD"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="pageSwitchControl" destination="Fi2-qY-p21" id="efE-Dm-aHn"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTd-kN-qBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3810.144927536232" y="-98.4375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LRU-YP-g1x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VRc-hp-XIE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uSa-3m-Wbr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q9X-xg-esq" kind="relationship" relationship="rootViewController" id="QTp-Gu-fzo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0N-Fe-eE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="-98.4375"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="n1y-ql-dKg">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="wGV-oQ-tm0" customClass="FirstViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ImW-AI-Oal">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TXs-0T-7Fg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8L6-aO-agf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4571" y="-90"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="dF2-96-jbA">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="FZs-0p-oou" customClass="SecondViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CwN-f3-qN4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FAV-pi-EU2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8V-SO-G2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5307" y="-90"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="MWO-X6-cNk">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="ZTo-aR-dA2" customClass="ThirdViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="191-ei-OYz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YQc-gp-oeE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rST-UR-h6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5996" y="-90"/>
         </scene>
     </scenes>
     <resources>
