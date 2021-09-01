@@ -36,7 +36,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rY7-eL-xho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fM7-wE-TtO" secondAttribute="leading" symbolic="YES" id="5oK-wq-4fT"/>
+                                                <constraint firstItem="rY7-eL-xho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fM7-wE-TtO" secondAttribute="leading" constant="20" symbolic="YES" id="5oK-wq-4fT"/>
                                                 <constraint firstAttribute="bottom" secondItem="rY7-eL-xho" secondAttribute="bottom" constant="11.5" id="E46-wu-Eor"/>
                                                 <constraint firstAttribute="trailing" secondItem="rY7-eL-xho" secondAttribute="trailing" constant="273.5" id="ZKn-3z-8Bt"/>
                                                 <constraint firstItem="rY7-eL-xho" firstAttribute="top" secondItem="fM7-wE-TtO" secondAttribute="top" constant="11.5" id="lek-uF-m3J"/>
@@ -196,7 +196,7 @@
                 <pageViewController storyboardIdentifier="LogPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="HVx-ud-WF2" customClass="LogPageViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NYk-Nt-ySk">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="ETs-3D-P7e">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="ETs-3D-P7e">
                             <rect key="frame" x="12" y="5.5" width="390" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,6 +205,7 @@
                                 <segment title="Fixtures"/>
                                 <segment title="Teams"/>
                             </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="segmentedControlValueChange:" destination="HVx-ud-WF2" eventType="valueChanged" id="fch-aR-lsj"/>
@@ -219,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="3585.507246376812" y="-209.59821428571428"/>
         </scene>
-        <!--Green View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="oN7-Tc-80l">
             <objects>
-                <viewController storyboardIdentifier="GreenViewController" id="lZ0-fv-SXW" customClass="GreenViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="lZ0-fv-SXW" customClass="TableViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7De-DY-EeA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +231,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5BA-Ky-LrE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League and Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BO0-Xf-0eM">
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League and Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BO0-Xf-0eM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -238,7 +239,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="56F-ia-Dg3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaguetableTableViewCell" rowHeight="55" id="56F-ia-Dg3" customClass="LeaguetableTableViewCell" customModule="Football_fixtures" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="68.5" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56F-ia-Dg3" id="Iuc-B7-2Na">
@@ -283,7 +284,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yR4-aN-U9Y">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yR4-aN-U9Y">
                                                             <rect key="frame" x="29" y="0.0" width="39" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="39" id="BEt-Ak-S6k"/>
@@ -305,6 +306,14 @@
                                                 <constraint firstItem="lad-uZ-LWv" firstAttribute="centerY" secondItem="A61-na-kQa" secondAttribute="centerY" id="zzE-TY-6ds"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="number1" destination="fxs-tb-LsB" id="nR8-vx-IoL"/>
+                                            <outlet property="number2" destination="Z3x-Nb-lQC" id="jgp-81-ar1"/>
+                                            <outlet property="number3" destination="edF-ny-jZZ" id="d66-7Y-Jew"/>
+                                            <outlet property="positionLabel" destination="umh-bS-4fN" id="Abf-3N-8JJ"/>
+                                            <outlet property="teamLabel" destination="A61-na-kQa" id="KVP-HG-Jkt"/>
+                                            <outlet property="teamLogo" destination="yR4-aN-U9Y" id="D2k-SX-qip"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -318,6 +327,9 @@
                             <constraint firstItem="5BA-Ky-LrE" firstAttribute="leading" secondItem="mtL-Gy-Fc4" secondAttribute="leading" id="q6n-LV-Dca"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="5BA-Ky-LrE" id="Nbl-7e-fcx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwC-vA-yjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,6 +402,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zq5-Nm-20K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -400,10 +414,10 @@
             </objects>
             <point key="canvasLocation" x="2673.913043478261" y="-210.26785714285714"/>
         </scene>
-        <!--Red View Controller-->
+        <!--Fixtures View Controller-->
         <scene sceneID="MlP-dL-HcY">
             <objects>
-                <viewController storyboardIdentifier="RedViewController" id="3ju-qM-4eE" customClass="RedViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" id="3ju-qM-4eE" customClass="FixturesViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wlm-mT-uTa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +426,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="bXe-BH-XcU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FixturesTableViewCell" rowHeight="57" id="bXe-BH-XcU" customClass="FixturesTableViewCell" customModule="Football_fixtures" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bXe-BH-XcU" id="zJp-TO-kzk">
@@ -476,15 +490,18 @@
                             <constraint firstItem="zdW-lq-eVY" firstAttribute="trailing" secondItem="pQa-Di-hfp" secondAttribute="trailing" id="wEz-Vr-dZC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fixtures" destination="zdW-lq-eVY" id="FWg-Ym-MH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2g-j3-5ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5066.666666666667" y="-204.24107142857142"/>
         </scene>
-        <!--Blue View Controller-->
+        <!--Teams View Controller-->
         <scene sceneID="OR3-my-Fzx">
             <objects>
-                <viewController storyboardIdentifier="BlueViewController" id="YXc-TQ-dGW" customClass="BlueViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="YXc-TQ-dGW" customClass="TeamsViewController" customModule="Football_fixtures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHo-Cz-tNM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -499,14 +516,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="H93-a4-u3E">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamsCollectionViewCell" id="H93-a4-u3E" customClass="TeamsCollectionViewCell" customModule="Football_fixtures" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Upc-If-641">
                                             <rect key="frame" x="0.0" y="0.0" width="169" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ax9-IK-43A">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ax9-IK-43A">
                                                     <rect key="frame" x="0.0" y="0.0" width="169" height="206"/>
                                                 </imageView>
                                             </subviews>
@@ -531,6 +548,9 @@
                             <constraint firstItem="SaR-jv-rH5" firstAttribute="top" secondItem="WeL-1r-Jqk" secondAttribute="top" id="rkx-ml-Yps"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="teamsCollectionView" destination="SaR-jv-rH5" id="JkA-bQ-9Ch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T5-c1-S0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,6 +558,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ArsLogo" width="164.5" height="200"/>
         <image name="icons8-soccer-ball-50" width="25" height="25"/>
         <image name="icons8-stadium-48" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">

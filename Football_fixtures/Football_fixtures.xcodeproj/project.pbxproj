@@ -20,9 +20,12 @@
 		B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */; };
 		B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668B426DD7AF300E6F235 /* CompetitionModel.swift */; };
 		B43668EA26DF69BF00E6F235 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668E926DF69BF00E6F235 /* LogPageViewController.swift */; };
-		B43668EC26DF6B0200E6F235 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668EB26DF6B0100E6F235 /* GreenViewController.swift */; };
-		B43668EE26DF6B1200E6F235 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668ED26DF6B1200E6F235 /* RedViewController.swift */; };
-		B43668F026DF6B2400E6F235 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668EF26DF6B2400E6F235 /* BlueViewController.swift */; };
+		B43668EC26DF6B0200E6F235 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668EB26DF6B0100E6F235 /* TableViewController.swift */; };
+		B43668EE26DF6B1200E6F235 /* FixturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668ED26DF6B1200E6F235 /* FixturesViewController.swift */; };
+		B43668F026DF6B2400E6F235 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668EF26DF6B2400E6F235 /* TeamsViewController.swift */; };
+		B43668F326DFB19500E6F235 /* LeaguetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668F226DFB19500E6F235 /* LeaguetableTableViewCell.swift */; };
+		B43668F526DFB1DB00E6F235 /* FixturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668F426DFB1DB00E6F235 /* FixturesTableViewCell.swift */; };
+		B43668F726DFB21100E6F235 /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43668F626DFB21100E6F235 /* TeamsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +44,12 @@
 		B43668AE26DAFD6000E6F235 /* CompetitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableViewCell.swift; sourceTree = "<group>"; };
 		B43668B426DD7AF300E6F235 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 		B43668E926DF69BF00E6F235 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
-		B43668EB26DF6B0100E6F235 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
-		B43668ED26DF6B1200E6F235 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
-		B43668EF26DF6B2400E6F235 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		B43668EB26DF6B0100E6F235 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B43668ED26DF6B1200E6F235 /* FixturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesViewController.swift; sourceTree = "<group>"; };
+		B43668EF26DF6B2400E6F235 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		B43668F226DFB19500E6F235 /* LeaguetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguetableTableViewCell.swift; sourceTree = "<group>"; };
+		B43668F426DFB1DB00E6F235 /* FixturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesTableViewCell.swift; sourceTree = "<group>"; };
+		B43668F626DFB21100E6F235 /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,12 +151,23 @@
 		B43668E026DEFD4800E6F235 /* PageControllers + SegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				B43668F126DFB14A00E6F235 /* Views */,
 				B43668E926DF69BF00E6F235 /* LogPageViewController.swift */,
-				B43668EB26DF6B0100E6F235 /* GreenViewController.swift */,
-				B43668ED26DF6B1200E6F235 /* RedViewController.swift */,
-				B43668EF26DF6B2400E6F235 /* BlueViewController.swift */,
+				B43668EB26DF6B0100E6F235 /* TableViewController.swift */,
+				B43668ED26DF6B1200E6F235 /* FixturesViewController.swift */,
+				B43668EF26DF6B2400E6F235 /* TeamsViewController.swift */,
 			);
 			path = "PageControllers + SegmentedControl";
+			sourceTree = "<group>";
+		};
+		B43668F126DFB14A00E6F235 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B43668F226DFB19500E6F235 /* LeaguetableTableViewCell.swift */,
+				B43668F426DFB1DB00E6F235 /* FixturesTableViewCell.swift */,
+				B43668F626DFB21100E6F235 /* TeamsCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,15 +242,18 @@
 			files = (
 				B43668EA26DF69BF00E6F235 /* LogPageViewController.swift in Sources */,
 				B43668A826D932B400E6F235 /* TableViewCell.swift in Sources */,
-				B43668EC26DF6B0200E6F235 /* GreenViewController.swift in Sources */,
+				B43668EC26DF6B0200E6F235 /* TableViewController.swift in Sources */,
 				B43668B526DD7AF700E6F235 /* CompetitionModel.swift in Sources */,
-				B43668EE26DF6B1200E6F235 /* RedViewController.swift in Sources */,
+				B43668EE26DF6B1200E6F235 /* FixturesViewController.swift in Sources */,
+				B43668F526DFB1DB00E6F235 /* FixturesTableViewCell.swift in Sources */,
 				B436688A26D68FCB00E6F235 /* ViewController.swift in Sources */,
 				B43668A626D9320A00E6F235 /* DataModel.swift in Sources */,
 				B436688626D68FCB00E6F235 /* AppDelegate.swift in Sources */,
-				B43668F026DF6B2400E6F235 /* BlueViewController.swift in Sources */,
+				B43668F726DFB21100E6F235 /* TeamsCollectionViewCell.swift in Sources */,
+				B43668F026DF6B2400E6F235 /* TeamsViewController.swift in Sources */,
 				B43668AA26DA17B000E6F235 /* NetworkService.swift in Sources */,
 				B43668AD26DAF78D00E6F235 /* CompetitionViewController.swift in Sources */,
+				B43668F326DFB19500E6F235 /* LeaguetableTableViewCell.swift in Sources */,
 				B436688826D68FCB00E6F235 /* SceneDelegate.swift in Sources */,
 				B43668AF26DAFD6000E6F235 /* CompetitionTableViewCell.swift in Sources */,
 			);

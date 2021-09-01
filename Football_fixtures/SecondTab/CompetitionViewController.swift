@@ -50,10 +50,6 @@ extension CompetitionViewController: UITableViewDelegate, UITableViewDataSource 
         guard let vc = storyboard.instantiateViewController(withIdentifier: "LogPageViewController") as? LogPageViewController else {
             return
         }
-//        let vc = LogPageViewController()
-        
         self.navigationController?.pushViewController(vc, animated: true)
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
     }
 }
