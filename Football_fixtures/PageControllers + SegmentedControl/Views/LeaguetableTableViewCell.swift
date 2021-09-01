@@ -12,7 +12,6 @@ class LeaguetableTableViewCell: UITableViewCell {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var number1: UILabel!
-    
     @IBOutlet weak var number2: UILabel!
     @IBOutlet weak var number3: UILabel!
 }

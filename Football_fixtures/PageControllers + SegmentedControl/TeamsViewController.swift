@@ -14,7 +14,7 @@ class TeamsViewController: UIViewController {
         super.viewDidLoad()
         teamsCollectionView.dataSource = self
         teamsCollectionView.delegate = self
-        teamsCollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+        teamsCollectionView.contentInset = .init(top: 20, left: 16, bottom: 0, right: 16)
 
     }
 
@@ -34,8 +34,5 @@ extension TeamsViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return .init(width: view.frame.width, height: 300)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 16, left: 0, bottom: 0, right: 0)
-    }
 }
 

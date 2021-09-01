@@ -8,5 +8,6 @@
 import UIKit
 
 class TeamsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var teamCrest: UIImageView!
     
 }

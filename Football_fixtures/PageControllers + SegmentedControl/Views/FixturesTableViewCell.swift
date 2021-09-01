@@ -8,5 +8,8 @@
 import UIKit
 
 class FixturesTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var matchTime: UILabel!
+    @IBOutlet weak var matchDay: UILabel!
+    @IBOutlet weak var homeTeam: UILabel!
+    @IBOutlet weak var awayTeam: UILabel!
 }
