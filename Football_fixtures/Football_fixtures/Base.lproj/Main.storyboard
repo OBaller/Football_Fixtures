@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YqM-Mo-7qr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YqM-Mo-7qr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="63" id="ilD-rh-pAh" customClass="CompetitionTableViewCell" customModule="Football_fixtures" customModuleProvider="target">
@@ -29,17 +30,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="competition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-eL-xho">
-                                                    <rect key="frame" x="20" y="11.5" width="91" height="40"/>
+                                                    <rect key="frame" x="30" y="11.5" width="91" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rY7-eL-xho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fM7-wE-TtO" secondAttribute="leading" constant="20" symbolic="YES" id="5oK-wq-4fT"/>
-                                                <constraint firstAttribute="bottom" secondItem="rY7-eL-xho" secondAttribute="bottom" constant="11.5" id="E46-wu-Eor"/>
-                                                <constraint firstAttribute="trailing" secondItem="rY7-eL-xho" secondAttribute="trailing" constant="273.5" id="ZKn-3z-8Bt"/>
-                                                <constraint firstItem="rY7-eL-xho" firstAttribute="top" secondItem="fM7-wE-TtO" secondAttribute="top" constant="11.5" id="lek-uF-m3J"/>
+                                                <constraint firstItem="rY7-eL-xho" firstAttribute="top" secondItem="fM7-wE-TtO" secondAttribute="topMargin" constant="0.5" id="4Iv-Co-lI9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rY7-eL-xho" secondAttribute="bottom" constant="0.5" id="AD4-S2-eyl"/>
+                                                <constraint firstItem="rY7-eL-xho" firstAttribute="leading" secondItem="fM7-wE-TtO" secondAttribute="leadingMargin" constant="10" id="HaE-qv-Xgh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -51,12 +51,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fa2-7Z-P6I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="bottom" secondItem="Fa2-7Z-P6I" secondAttribute="bottom" id="MX9-m6-Wt7"/>
-                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="leading" secondItem="Fa2-7Z-P6I" secondAttribute="leading" id="eBW-KX-wBT"/>
-                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="trailing" secondItem="Fa2-7Z-P6I" secondAttribute="trailing" id="u0L-KJ-ouq"/>
-                            <constraint firstItem="YqM-Mo-7qr" firstAttribute="top" secondItem="Fa2-7Z-P6I" secondAttribute="top" id="ygp-zH-urm"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Competitions" id="Hvx-VZ-Xnu"/>
                     <connections>
