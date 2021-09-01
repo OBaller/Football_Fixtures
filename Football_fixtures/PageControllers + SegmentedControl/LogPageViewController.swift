@@ -9,7 +9,7 @@ import UIKit
 
 class LogPageViewController: UIPageViewController {
     @IBOutlet weak var pageSwitchControl: UISegmentedControl!
-    var currentView: UIViewController?
+    var id: Int?
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController(color: "Green"),
                 self.newColoredViewController(color: "Red"),
@@ -23,6 +23,8 @@ class LogPageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(id)
+        
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
@@ -30,6 +32,17 @@ class LogPageViewController: UIPageViewController {
                                completion: nil)
         }
         
+        fetchStandings(id: id)
+        
+    }
+    
+    func fetchStandings(id: Int?) {
+        guard let id = id else {
+            return
+        }
+        StandingsService.shared.fetchLog(LeagueId: id) { (results, error) in
+            print(results)
+        }
     }
     
     
@@ -39,5 +52,6 @@ class LogPageViewController: UIPageViewController {
                            direction: .forward,
                            animated: true,
                            completion: nil)
+        
     }
 }

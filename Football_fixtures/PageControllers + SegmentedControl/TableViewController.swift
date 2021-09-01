@@ -9,13 +9,18 @@ import UIKit
 
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
+    var id: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
+        print(id)
+//        fetchStandings(id: id)
     }
-
+    
+    
 }
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {

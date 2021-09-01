@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         view.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.color = .black
-
+        
         let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     func fetchFixtures() {
-        Service.shared.fetchData { (results, error) in
+        LiveScoreService.shared.fetchData { (results, error) in
             if let error = error {
                 print("Failed to fetch football data", error)
                 return
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             self.footballData = results
             DispatchQueue.main.async {
                 self.gamesTableView.reloadData()
-                //               print(results)
+                print(self.footballData)
             }
         }
     }

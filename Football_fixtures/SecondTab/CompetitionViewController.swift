@@ -19,7 +19,7 @@ class CompetitionViewController: UIViewController {
     }
     
     func fetchCompetition() {
-        Service.shared.fetchLeagues { (results, error) in
+        CompetitionService.shared.fetchLeagues { (results, error) in
             if let error = error {
               print("Failed to fetch football data", error)
                 return
@@ -42,14 +42,28 @@ extension CompetitionViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CompetitionTableViewCell
         cell.setup(with: competition[indexPath.row])
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "LogPageViewController") as? LogPageViewController else {
             return
         }
+        let controller = UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewController(withIdentifier: "GreenViewController") as! TableViewController
+        vc.id = competition[indexPath.row].id
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
+
+//let restaurantMeal = viewModel.restaurant[indexPath.row]
+//let restaurantDetailStoryboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
+//let detailViewController = restaurantDetailStoryboard
+//    .instantiateViewController(identifier: "DetailViewController") as DetailViewController
+//detailViewController.viewModel.restaurantData = restaurantMeal
+//navigationController?.pushViewController(detailViewController, animated: true)
+//detailViewController.tabBarController?.tabBar.isHidden = true

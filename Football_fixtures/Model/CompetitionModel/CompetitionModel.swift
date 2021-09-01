@@ -21,14 +21,15 @@ struct Competition: Codable {
     let plan: Plan?
     let currentSeason: CurrentSeason?
     let numberOfAvailableSeasons: Int?
-    let lastUpdated: String?
+//    let lastUpdated: String?
 
     enum CodingKeys: String, CodingKey {
         case id, area, name
 //        case code
         case emblemURL = "emblemUrl"
         case plan
-             case currentSeason, numberOfAvailableSeasons, lastUpdated
+             case currentSeason, numberOfAvailableSeasons
+//        case lastUpdated
     }
 }
 //
