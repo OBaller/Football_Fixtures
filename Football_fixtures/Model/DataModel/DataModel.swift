@@ -33,10 +33,10 @@ struct Match: Codable {
 }
 
 // MARK: - Team
-struct Team: Codable {
-    let id: Int
-    let name: String
-}
+//struct Team: Codable {
+//    let id: Int
+//    let name: String
+//}
 
 // MARK: - Competition
 //struct Competition: Codable {

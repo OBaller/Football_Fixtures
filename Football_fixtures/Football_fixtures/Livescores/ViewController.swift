@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var refreshControl = UIRefreshControl()
     var activityIndicator = UIActivityIndicatorView(style: .large)
     var timer = Timer()
     let delay = 4.5
@@ -31,8 +32,12 @@ class ViewController: UIViewController {
         view.addConstraint(verticalConstraint)
         fetchFixtures()
         indicateActivity()
+        refreshControl = UIRefreshControl()
+            refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+            refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        gamesTableView.addSubview(refreshControl)
     }
-    
+
     func fetchFixtures() {
         LiveScoreService.shared.fetchData { (results, error) in
             if let error = error {
@@ -56,6 +61,11 @@ class ViewController: UIViewController {
     func indicateActivity () {
         activityIndicator.startAnimating()
         timer = Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
+    }
+    
+    @objc func refresh(_ sender: Any) {
+        fetchFixtures()
+        refreshControl.endRefreshing()
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     var id: Int?
-    
+    fileprivate var tableData = [Table]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,12 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaguetableTableViewCell", for: indexPath) as! LeaguetableTableViewCell
+        cell.setup(with: tableData[indexPath.row])
         return cell
     }
     

@@ -66,16 +66,16 @@ struct Table: Codable {
 }
 
 // MARK: - Team
-//struct Team: Codable {
-//    let id: Int
-//    let name: String
-//    let crestURL: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name
-//        case crestURL = "crestUrl"
-//    }
-//}
+  struct Team: Codable {
+    let id: Int
+    let name: String
+   // let crestURL: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+     //   case crestURL = "crestUrl"
+    }
+}
 
 // MARK: - Encode/decode helpers
 
