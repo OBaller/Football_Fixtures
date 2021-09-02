@@ -14,4 +14,9 @@ class LeaguetableTableViewCell: UITableViewCell {
     @IBOutlet weak var number1: UILabel!
     @IBOutlet weak var number2: UILabel!
     @IBOutlet weak var number3: UILabel!
+    
+    func setup(with model: Table) {
+        
+        
+    }
 }
