@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,8 +29,6 @@
 		B474CE5A26DFD606007BB4D7 /* Competitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B474CE5926DFD606007BB4D7 /* Competitions.swift */; };
 		B474CE5C26DFD940007BB4D7 /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B474CE5B26DFD940007BB4D7 /* Standings.swift */; };
 		B474CE5F26DFDBBA007BB4D7 /* StandingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B474CE5E26DFDBBA007BB4D7 /* StandingsModel.swift */; };
-		B474CE6226E0E245007BB4D7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B474CE6126E0E245007BB4D7 /* SDWebImage */; };
-		B474CE6426E0E245007BB4D7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B474CE6326E0E245007BB4D7 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B474CE6426E0E245007BB4D7 /* SDWebImageMapKit in Frameworks */,
-				B474CE6226E0E245007BB4D7 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +212,6 @@
 			);
 			name = Football_fixtures;
 			packageProductDependencies = (
-				B474CE6126E0E245007BB4D7 /* SDWebImage */,
-				B474CE6326E0E245007BB4D7 /* SDWebImageMapKit */,
 			);
 			productName = Football_fixtures;
 			productReference = B436688226D68FCB00E6F235 /* Football_fixtures.app */;
@@ -247,7 +241,6 @@
 			);
 			mainGroup = B436687926D68FCB00E6F235;
 			packageReferences = (
-				B474CE6026E0E245007BB4D7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = B436688326D68FCB00E6F235 /* Products */;
 			projectDirPath = "";
@@ -494,30 +487,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B474CE6026E0E245007BB4D7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.11.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B474CE6126E0E245007BB4D7 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B474CE6026E0E245007BB4D7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		B474CE6326E0E245007BB4D7 /* SDWebImageMapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B474CE6026E0E245007BB4D7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImageMapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B436687A26D68FCB00E6F235 /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
    
@@ -20,7 +21,7 @@ class TableViewController: UIViewController {
     }
     
     func fetchStandings() {
-        StandingsService.shared.fetchLog() { (results, error) in
+        StandingsService.shared.fetchLog { (results, error) in
             if let error = error {
                 print("Failed to fetch data", error)
                 return
@@ -28,7 +29,7 @@ class TableViewController: UIViewController {
             self.log = results
             DispatchQueue.main.async {
                 self.table.reloadData()
-                print(results)
+                //print(results)
             }
     }
 }
@@ -46,8 +47,8 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 

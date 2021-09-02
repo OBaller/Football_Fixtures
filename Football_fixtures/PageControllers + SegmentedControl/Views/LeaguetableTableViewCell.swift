@@ -4,7 +4,6 @@
 //
 //  Created by IBE on 01/09/2021.
 //
-import SDWebImage
 import UIKit
 
 class LeaguetableTableViewCell: UITableViewCell {
@@ -14,13 +13,15 @@ class LeaguetableTableViewCell: UITableViewCell {
     @IBOutlet weak var number1: UILabel!
     @IBOutlet weak var number2: UILabel!
     @IBOutlet weak var number3: UILabel!
+    var img: URL?
     
     func setup(with model: Table) {
         positionLabel.text = "\(model.position)"
-        textLabel?.text = "\(model.team)"
-        number1.text = "\(model.points)"
-        number2.text = "\(model.playedGames)"
-        number3.text = "\(model.won)"
-       //teamLogo.sd_setImage(with: URL(string: model.team.crestURL))
+        teamLabel.text = "\(model.team.name)"
+        number1.text = "\(model.playedGames)"
+        number2.text = "\(model.won)"
+        number3.text = "\(model.points)"
+        
+        
     }
 }

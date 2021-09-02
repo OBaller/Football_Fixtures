@@ -17,42 +17,27 @@ class LiveScoreService {
             print("error creating url object")
             return
         }
-        // URL Request
         var request = URLRequest(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
-        // Specify the header
-        let header = [" ": "cc63bac0567b4b2ea211821801cdc961", "accept": "string", "content-type": "application/json"]
+        let header = ["X-Auth-Token": "cc63bac0567b4b2ea211821801cdc961", "accept": "string", "content-type": "application/json"]
         request.allHTTPHeaderFields = header
-        // Specify the body
-        
-        // Set the request type
         request.httpMethod = "GET"
-        // Get the URLSession
         let session = URLSession.shared
-        // Create the datatask
         let dataTask = session.dataTask(with: request) { data, response, error in
-            // check for errors
             if error == nil && data != nil {
-                // try to parse the data
-                print(data)
                 guard let data = data else {return}
                 do {
                     let jsonDecoder = try
                         JSONDecoder().decode(DataModel.self, from: data)
-                    
-                 //  print(jsonDecoder)
-                
+                    //  print(jsonDecoder)
                     completion(jsonDecoder.matches , nil)
-                    
                 } catch let jsonErr {
                     print("failed to decode json data", jsonErr)
                     completion([], nil)
                 }
             }
-
+            
         }
-        // Fire off the datatask
         dataTask.resume()
-
     }
     
 }

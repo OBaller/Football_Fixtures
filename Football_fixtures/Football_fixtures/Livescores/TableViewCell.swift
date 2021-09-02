@@ -25,7 +25,6 @@ class TableViewCell: UITableViewCell {
         homeScoreLabel.text = "\(model.score.fullTime.homeTeam ?? 0)"
         awayScoreLabel.text = "\(model.score.fullTime.awayTeam ?? 0)"
         matchTimeLabel.text = "\(model.status.rawValue)"
-        print("\(model.competition)")
        
     }
 

@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         fetchFixtures()
         indicateActivity()
         refreshControl = UIRefreshControl()
-            refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-            refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         gamesTableView.addSubview(refreshControl)
     }
-
+    
     func fetchFixtures() {
         LiveScoreService.shared.fetchData { (results, error) in
             if let error = error {
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             self.footballData = results
             DispatchQueue.main.async {
                 self.gamesTableView.reloadData()
-                print(self.footballData)
+                // print(self.footballData)
             }
         }
     }
@@ -79,8 +79,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(with: footballData[indexPath.row])
         return cell
     }
-    
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //    }
 }

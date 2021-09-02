@@ -15,7 +15,7 @@
 import Foundation
 
 // MARK: - Welcome
-struct Standings: Codable {
+struct StandingsModel: Codable {
     let filters: Filters
     let competition: Competition
     let season: Season
@@ -52,7 +52,7 @@ struct Standings: Codable {
 struct Standing: Codable {
     let stage, type: String?
     let group: JSONNull?
-    let table: [Table]?
+    let table: [Table]
 }
 
 // MARK: - Table
@@ -69,11 +69,11 @@ struct Table: Codable {
   struct Team: Codable {
     let id: Int
     let name: String
-   // let crestURL: String
+    let crestURL: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
-     //   case crestURL = "crestUrl"
+        case crestURL = "crestUrl"
     }
 }
 
