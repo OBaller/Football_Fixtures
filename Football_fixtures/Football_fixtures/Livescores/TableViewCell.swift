@@ -9,7 +9,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
    
-    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var matchTimeLabel: UILabel!
     @IBOutlet weak var gameWeekLabel: UILabel!
     @IBOutlet weak var homeTeamLabel: UILabel!
@@ -22,7 +21,7 @@ class TableViewCell: UITableViewCell {
         
         homeTeamLabel.text = "\(model.homeTeam.name)"
         awayTeamLabel.text = "\(model.awayTeam.name)"
-        gameWeekLabel.text = "\(model.matchday)"
+        gameWeekLabel.text = "MD:\(model.matchday)"
         homeScoreLabel.text = "\(model.score.fullTime.homeTeam ?? 0)"
         awayScoreLabel.text = "\(model.score.fullTime.awayTeam ?? 0)"
         matchTimeLabel.text = "\(model.status.rawValue)"
