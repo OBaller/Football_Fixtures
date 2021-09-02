@@ -10,7 +10,7 @@ import Foundation
 class StandingsService {
     static let shared = StandingsService()
     
-    func fetchLog(LeagueId id: Int, completion: @escaping ([Standing], Error?) -> () ) {
+    func fetchLog(completion: @escaping ([Table], Error?) -> () ) {
         // URL
         let url = URL(string: "https://api.football-data.org/v2/competitions/2021/standings")
 //        guard url != nil else {
@@ -34,11 +34,11 @@ class StandingsService {
                 
                 do {
                     let jsonDecoder = try
-                        JSONDecoder().decode(Standings.self, from: data)
+                        JSONDecoder().decode(Standing.self, from: data)
                     
-                    print(jsonDecoder.standings)
+                    print(jsonDecoder.table)
                     
-                    completion(jsonDecoder.standings , error)
+                    completion(jsonDecoder.table ?? [] , error)
                     
                 } catch let jsonErr {
                     print("failed to decode json data", jsonErr)

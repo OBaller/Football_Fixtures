@@ -32,7 +32,7 @@ class CompetitionService {
                     let jsonDecoder = try
                         JSONDecoder().decode(CompetitionModel.self, from: data)
                     
-                    print(jsonDecoder.competitions)
+                   // print(jsonDecoder.competitions)
                 
                     completion(jsonDecoder.competitions , error)
                     

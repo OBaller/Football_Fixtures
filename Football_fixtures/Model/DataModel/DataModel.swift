@@ -23,7 +23,7 @@ struct Match: Codable {
     let utcDate: String
     let status: Status
     let matchday: Int
-    let stage: Stage
+   // let stage: Stage
     let group: JSONNull?
     let lastUpdated: String
     let odds: Odds
@@ -128,9 +128,9 @@ struct Season: Codable {
     let winner: JSONNull?
 }
 
-enum Stage: String, Codable {
-    case regularSeason = "REGULAR_SEASON"
-}
+//enum Stage: String, Codable {
+//    case regularSeason = "REGULAR_SEASON"
+//}
 
 enum Status: String, Codable {
     case finished = "FINISHED"

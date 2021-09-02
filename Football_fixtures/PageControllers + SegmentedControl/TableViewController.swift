@@ -9,28 +9,40 @@ import UIKit
 
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
-    var id: Int?
-    fileprivate var tableData = [Table]()
+   
+     var log = [Table]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
-        print(id)
-//        fetchStandings(id: id)
+        fetchStandings()
     }
     
+    func fetchStandings() {
+        StandingsService.shared.fetchLog() { (results, error) in
+            if let error = error {
+                print("Failed to fetch data", error)
+                return
+        }
+            self.log = results
+            DispatchQueue.main.async {
+                self.table.reloadData()
+                print(results)
+            }
+    }
+}
     
 }
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return log.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaguetableTableViewCell", for: indexPath) as! LeaguetableTableViewCell
-        cell.setup(with: tableData[indexPath.row])
+        cell.setup(with: log[indexPath.row])
         return cell
     }
     
@@ -38,3 +50,4 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
 //        
 //    }
 }
+

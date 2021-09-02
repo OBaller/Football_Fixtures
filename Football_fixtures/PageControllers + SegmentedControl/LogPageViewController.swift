@@ -9,7 +9,6 @@ import UIKit
 
 class LogPageViewController: UIPageViewController {
     @IBOutlet weak var pageSwitchControl: UISegmentedControl!
-    var id: Int?
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController(color: "Green"),
                 self.newColoredViewController(color: "Red"),
@@ -23,7 +22,6 @@ class LogPageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(id)
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -32,19 +30,7 @@ class LogPageViewController: UIPageViewController {
                                completion: nil)
         }
         
-        fetchStandings(id: id)
-        
     }
-    
-    func fetchStandings(id: Int?) {
-        guard let id = id else {
-            return
-        }
-        StandingsService.shared.fetchLog(LeagueId: id) { (results, error) in
-            print(results)
-        }
-    }
-    
     
     @IBAction func segmentedControlValueChange(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex

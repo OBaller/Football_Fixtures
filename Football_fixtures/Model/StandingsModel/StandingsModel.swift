@@ -16,7 +16,7 @@ import Foundation
 
 // MARK: - Welcome
 struct Standings: Codable {
-//    let filters: Filters
+    let filters: Filters
     let competition: Competition
     let season: Season
     let standings: [Standing]
@@ -50,9 +50,9 @@ struct Standings: Codable {
 
 // MARK: - Standing
 struct Standing: Codable {
-    let stage, type: String
+    let stage, type: String?
     let group: JSONNull?
-    let table: [Table]
+    let table: [Table]?
 }
 
 // MARK: - Table

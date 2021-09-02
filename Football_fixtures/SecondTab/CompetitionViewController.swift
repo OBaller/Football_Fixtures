@@ -54,16 +54,8 @@ extension CompetitionViewController: UITableViewDelegate, UITableViewDataSource 
         }
         let controller = UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "GreenViewController") as! TableViewController
-        vc.id = competition[indexPath.row].id
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 
-//let restaurantMeal = viewModel.restaurant[indexPath.row]
-//let restaurantDetailStoryboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
-//let detailViewController = restaurantDetailStoryboard
-//    .instantiateViewController(identifier: "DetailViewController") as DetailViewController
-//detailViewController.viewModel.restaurantData = restaurantMeal
-//navigationController?.pushViewController(detailViewController, animated: true)
-//detailViewController.tabBarController?.tabBar.isHidden = true
