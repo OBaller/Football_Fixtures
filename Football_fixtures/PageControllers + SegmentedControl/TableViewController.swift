@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImage
 
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!

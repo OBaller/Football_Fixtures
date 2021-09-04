@@ -4,15 +4,18 @@
 //
 //  Created by IBE on 01/09/2021.
 //
-import Kingfisher
+
 import UIKit
+import SDWebImage
 
 class TeamsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var teamCrest: UIImageView!
     
     func setup(with model: Table) {
-        teamCrest.kf.setImage(with: model.team.crestURL?.asUrl)
-
+        guard let url = model.team.crestURL else {
+            return
+        }
+        teamCrest.sd_setImage(with: URL(string: url))
     }
 }
 

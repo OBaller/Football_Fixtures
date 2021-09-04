@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImage
 
 class LeaguetableTableViewCell: UITableViewCell {
     @IBOutlet weak var teamLogo: UIImageView!
@@ -24,7 +24,9 @@ class LeaguetableTableViewCell: UITableViewCell {
         number3.text = "\(model.points)"
 //        let image = try? model.team.crestURL.asURL()
 //        teamLogo.kf.setImage(with: image)
-        teamLogo.kf.setImage(with: model.team.crestURL?.asUrl)
+//        teamLogo.kf.setImage(with: model.team.crestURL?.asUrl)
+        teamLogo.sd_setImage(with: URL(string: model.team.crestURL ?? ""))
+        
 //        self.teamLogo.kf.setImage(with: URL(string: model.team.crestURL!))
         
     }

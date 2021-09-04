@@ -137,6 +137,7 @@ enum Status: String, Codable {
     case inPlay = "IN_PLAY"
     case paused = "PAUSED"
     case scheduled = "SCHEDULED"
+    case postponed = "POSTPONED"
 }
 
 // MARK: - Encode/decode helpers

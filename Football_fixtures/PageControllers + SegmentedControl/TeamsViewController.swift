@@ -4,7 +4,6 @@
 //
 //  Created by IBE on 01/09/2021.
 //
-import Kingfisher
 import UIKit
 
 class TeamsViewController: UIViewController {
