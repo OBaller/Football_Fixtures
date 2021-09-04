@@ -40,6 +40,7 @@
                                                 <constraint firstItem="rY7-eL-xho" firstAttribute="top" secondItem="fM7-wE-TtO" secondAttribute="topMargin" constant="0.5" id="4Iv-Co-lI9"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="rY7-eL-xho" secondAttribute="bottom" constant="0.5" id="AD4-S2-eyl"/>
                                                 <constraint firstItem="rY7-eL-xho" firstAttribute="leading" secondItem="fM7-wE-TtO" secondAttribute="leadingMargin" constant="10" id="HaE-qv-Xgh"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rY7-eL-xho" secondAttribute="trailing" constant="20" symbolic="YES" id="pqR-F9-ugz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

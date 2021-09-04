@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class TableViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
@@ -44,6 +44,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaguetableTableViewCell", for: indexPath) as! LeaguetableTableViewCell
         cell.setup(with: log[indexPath.row])
+            // cell.teamLogo.kf.setImage(with: URL(string: log[indexPath.row].team.crestURL!))
         return cell
     }
     
