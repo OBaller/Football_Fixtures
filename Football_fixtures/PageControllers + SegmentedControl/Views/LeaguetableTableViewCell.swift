@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import SDWebImageSVGCoder
 
 class LeaguetableTableViewCell: UITableViewCell {
     @IBOutlet weak var teamLogo: UIImageView!
@@ -22,19 +22,8 @@ class LeaguetableTableViewCell: UITableViewCell {
         number1.text = "\(model.playedGames)"
         number2.text = "\(model.won)"
         number3.text = "\(model.points)"
-//        let image = try? model.team.crestURL.asURL()
-//        teamLogo.kf.setImage(with: image)
-//        teamLogo.kf.setImage(with: model.team.crestURL?.asUrl)
+
         teamLogo.sd_setImage(with: URL(string: model.team.crestURL ?? ""))
-        
-//        self.teamLogo.kf.setImage(with: URL(string: model.team.crestURL!))
-        
     }
 }
 
-
-extension String {
-    var asUrl: URL? {
-        return URL(string: self)
-    }
-}

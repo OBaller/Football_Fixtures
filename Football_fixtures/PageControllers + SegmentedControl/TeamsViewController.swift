@@ -8,13 +8,15 @@ import UIKit
 
 class TeamsViewController: UIViewController {
     @IBOutlet weak var teamsCollectionView: UICollectionView!
+    
     var teamcrest = [Table]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         teamsCollectionView.dataSource = self
         teamsCollectionView.delegate = self
-        teamsCollectionView.contentInset = .init(top: 20, left: 16, bottom: 0, right: 16)
-
+//        teamsCollectionView.contentInset = .init(top: 10, left: 5, bottom: 5, right: 5)
+        fetchTeams()
     }
     
     func fetchTeams() {
@@ -26,7 +28,7 @@ class TeamsViewController: UIViewController {
             self.teamcrest = results
             DispatchQueue.main.async {
                 self.teamsCollectionView.reloadData()
-                print(results)
+               // print(results)
             }
     }
 }
@@ -45,7 +47,11 @@ extension TeamsViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: 150, height: 200)
+        return .init(width: (view.frame.width - 30) / 3, height: 250)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .init(5)
     }
     
 }
