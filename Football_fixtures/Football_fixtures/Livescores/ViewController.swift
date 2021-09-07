@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         gamesTableView.delegate = self
         gamesTableView.dataSource = self
-        view.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.color = .black
         
