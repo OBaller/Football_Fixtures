@@ -2,7 +2,7 @@
 //  CompetitionViewController.swift
 //  Football_fixtures
 //
-//  Created by IBE on 29/08/2021.
+//  Created by naseem on 29/08/2021.
 //
 
 import UIKit

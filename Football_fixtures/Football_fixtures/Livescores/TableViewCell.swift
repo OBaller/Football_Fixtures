@@ -2,7 +2,7 @@
 //  TableViewCell.swift
 //  Football_fixtures
 //
-//  Created by IBE on 27/08/2021.
+//  Created by naseem on 27/08/2021.
 //
 
 import UIKit

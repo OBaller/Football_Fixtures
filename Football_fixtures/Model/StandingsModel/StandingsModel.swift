@@ -2,15 +2,8 @@
 //  StandingsModel.swift
 //  Football_fixtures
 //
-//  Created by IBE on 01/09/2021.
+//  Created by naseem on 01/09/2021.
 //
-
-//import Foundation
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
 
